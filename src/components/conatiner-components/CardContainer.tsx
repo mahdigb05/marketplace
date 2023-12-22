@@ -7,12 +7,10 @@ interface SectionContainerProps extends HTMLProps<HTMLDivElement> {
 
 const CardContainer: FC<SectionContainerProps> = ({children, className,  ...rest}) => {
     return (
-        <div className={` rounded border-gradient-primary p-[1px]`}>
-            <div className={twMerge("rounded w-full h-full  bg-white", className)} {...rest}>
+        <div className={twMerge(` rounded p-[1px] border-primary border-[1px] bg-white`, className)} {...rest}>
                 {
                     children
                 }
-            </div>
         </div>
     )
 }

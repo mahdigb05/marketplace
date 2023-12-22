@@ -31,6 +31,12 @@ h2 {
 
 h3 {
     font-size: 34px;
+    display: inline-block;
+    background: linear-gradient(93deg, #0080A9 0%, #62D4A8 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    @apply font-bold
 }
 
 h4 {
@@ -41,6 +47,6 @@ h5 {
     font-size: 20px;
 }
 
-.border-gradient-primary {
+.gradient-primary {
     background: linear-gradient(93deg, #0080A9 0%, #62D4A8 100%);
 }

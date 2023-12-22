@@ -57,7 +57,7 @@ const MainNav = () => {
                         </li>
                         {
                             navItems.map(item => <li>
-                                <NavLink className="font-bold">
+                                <NavLink to="" className="font-bold">
                                     {item.title}
                                 </NavLink>
                             </li>)

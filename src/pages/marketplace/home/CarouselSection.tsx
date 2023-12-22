@@ -18,12 +18,12 @@ const CarouselSection = () => {
 
     useEffect(() => {
         const id: number = setInterval(() => {
-            nextSlide();
+            setCurrent((prevSlide) => (prevSlide + 1) % slides.length)
         }, 10000)
 
         return () => clearInterval(id);
 
-    }, [current])
+    }, [setCurrent, current])
 
     return (
         <CardContainer className="p-4 md:p-5 h-[35rem]">
@@ -36,11 +36,11 @@ const CarouselSection = () => {
                 >
                     {slides.map((slide) => {
                         return <div className=" w-full h-full inline-block">
-                            <div className="bg-cover h-[75%] mb-2.5 bg-center"
+                            <div className="bg-cover h-[75%] mb-2.5 bg-center rounded"
                                  style={{backgroundImage: `url(${slide.imgUrl})`}}></div>
                             <div className="text-center flex flex-col gap-2.5">
-                                <h4 className="text-primary font-bold">{slide.heading}</h4>
-                                <h4>{slide.description}</h4>
+                                <p className="text-primary font-bold text-xl md:text-2xl whitespace-pre-line">{slide.heading}</p>
+                                <p className="text-base md:text-2xl">{slide.description}</p>
                             </div>
                         </div>
                     })}
@@ -79,7 +79,7 @@ const CarouselSection = () => {
                 </div>
 
                 <div className="absolute bottom-0 py-4 flex justify-center gap-3 w-full">
-                    {slides.map((slide, i) =>
+                    {slides.map((_, i) =>
                         <button onClick={() => {
                             setCurrent(i);
                         }} key={"circle" + i} className={`w-2 h-2 rounded-full ${

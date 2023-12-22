@@ -7,7 +7,7 @@ const SearchSection = () => {
             <div className="md:text-center">
                 <h1 className="font-bold mb-10">Which Data are you looking for?</h1>
                 <div className="flex gap-3 mb-6 mx-auto md:w-[70%] lg:w-[55%] ">
-                    <div className="border-gradient-primary p-[1px] rounded flex-grow">
+                    <div className="gradient-primary p-[1px] rounded flex-grow">
                         <div className="flex gap-2 h-full w-full rounded px-2 bg-white items-center ">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
                                  stroke="currentColor" className="w-6 h-6 text-primary">
@@ -20,7 +20,7 @@ const SearchSection = () => {
                     </div>
                     <Button className="px-6">Search</Button>
                 </div>
-                <p className="sm:text-lg text-sm">Effortlessly find the data you need with our search bar</p>
+                <p className="text-xs md:text-lg">Effortlessly find the data you need with our search bar</p>
             </div>
         </CardContainer>
     )
