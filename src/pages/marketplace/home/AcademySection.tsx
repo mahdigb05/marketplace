@@ -4,7 +4,7 @@ import Button from "../../../components/core/Button";
 const AcademySection = () => {
     return (
         <CardContainer className="p-4 md:p-5 flex flex-col gap-5">
-            <div> 
+            <div>
                 <h3>Academy</h3>
             </div>
             <div>

@@ -1,5 +1,5 @@
 import {FC} from "react";
-import {CheckIcon, ExclamationIcon} from "../core/icons";
+import {CheckIconCircle, ExclamationIconCircle} from "../core/icons";
 import { DataObject } from "../../types";
 
 interface DataObjectContainerProps {
@@ -35,7 +35,7 @@ const DataObjectPreview: FC<DataObjectContainerProps> = ({dataObject}) => {
                     </div>
                 </div>
                 <div>
-                    {status === "ACTIVE" ? <CheckIcon/> : <ExclamationIcon/>}
+                    {status === "ACTIVE" ? <CheckIconCircle/> : <ExclamationIconCircle/>}
                 </div>
             </div>
         </div>

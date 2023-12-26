@@ -12,3 +12,17 @@ export interface DataObject {
         producers : string[] | null
     } | null;
 }
+
+export interface SearchResponse{
+    dataObjects : DataObject[];
+    page : number;
+    size : number;
+    total : number;
+    pages : number;
+}
+
+export interface FilterSettings {
+    category?: string;
+    producer?: string;
+    status?: string;
+}

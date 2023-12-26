@@ -1,3 +1,6 @@
+import {twMerge} from "tailwind-merge";
+import {ClassValue, clsx} from "clsx";
+
 export function objectToQueryString<T extends Object>(obj : T) {
     const params = new URLSearchParams();
 
@@ -8,4 +11,8 @@ export function objectToQueryString<T extends Object>(obj : T) {
     }
 
     return params.toString();
+}
+
+export function cn(...inputs: ClassValue[]) {
+    return twMerge(clsx(inputs))
 }
